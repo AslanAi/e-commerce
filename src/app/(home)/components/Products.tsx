@@ -1,9 +1,11 @@
 import React from 'react';
 import { ChevronLeft, ChevronRight, Heart, Eye } from 'lucide-react';
-import p1 from '../../../../public/product/image.png';
+import p1 from '../../../../public/product/p1.png';
 import Image from 'next/image';
+// import { Link } from 'react-router-dom';
 
 interface Product {
+  id:number;
   name: string;
   price: string;
   originalPrice?: string;
@@ -20,6 +22,7 @@ interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        {/* <Link to={`/detail/${product.id}`} className="product-link"> */}
       {/* Image container */}
       <div className="relative group">
         <Image
@@ -42,9 +45,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </div>
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
       </div>
-
+      {/* </Link> */}
       {/* Content */}
       <div className="p-4">
+      {/* <Link to={`/detail/${product.id}`} className="product-link"> */}
+
         <h3 className="font-medium text-sm mb-1 truncate">{product.name}</h3>
         <div className="flex items-center gap-2 mb-2">
           <span className="font-bold text-blue-900">LKR {product.price}</span>
@@ -70,6 +75,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <button className="w-full bg-black text-white py-2 rounded-md hover:bg-blue-800 transition-colors">
           Add To Cart
         </button>
+        {/* </Link> */}
       </div>
     </div>
   );
@@ -78,6 +84,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 const ProductSection: React.FC = () => {
   const promotionalProducts: Product[] = [
     {
+      id:1,
       name: "ACNES PURE WHITE CREAM 50G",
       price: "1550",
       originalPrice: "3100",
@@ -87,6 +94,7 @@ const ProductSection: React.FC = () => {
       image: "/api/placeholder/200/200"
     },
     {
+      id:2,
       name: "ADVANCED WEIGHT GAINER 500G",
       price: "4377",
       originalPrice: "5150",
@@ -96,6 +104,7 @@ const ProductSection: React.FC = () => {
       image: "/api/placeholder/200/200"
     },
     {
+      id:3,
       name: "BABY CHERAMY COLOGNE 100ML",
       price: "425",
       originalPrice: "500",
@@ -105,6 +114,7 @@ const ProductSection: React.FC = () => {
       image: "/api/placeholder/200/200"
     },
     {
+      id:4,
       name: "DETTOL ANTIBACTERIAL SURFACE",
       price: "573",
       originalPrice: "675",
@@ -167,7 +177,8 @@ const ProductSection: React.FC = () => {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-black">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-black">    
+      
           {promotionalProducts.map((product, index) => (
             <ProductCard key={index} product={product} />
           ))}

@@ -43,7 +43,7 @@ const Header = () => {
             <Link href="/category" className="text-gray-700 hover:text-navy-900 font-medium">
               Categories
             </Link>
-            <Link href="/offers" className="text-gray-700 hover:text-navy-900 font-medium">
+            <Link href="/detail" className="text-gray-700 hover:text-navy-900 font-medium">
               Offers
             </Link>
             <Link href="/recently-added" className="text-gray-700 hover:text-navy-900 font-medium">

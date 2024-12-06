@@ -1,6 +1,6 @@
 import React from 'react';
 import { ChevronLeft, ChevronRight, Heart, Eye } from 'lucide-react';
-import p1 from '../../../../public/product/image.png';
+import p1 from '../../../../public/product/p1.png';
 import Image from 'next/image';
 
 

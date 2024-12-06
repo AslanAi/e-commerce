@@ -109,12 +109,12 @@ const Footer = () => {
             <p className="text-gray-600 text-sm">
               © 2024 VASHANTHY. Designed for your wellness.
             </p>
-            <div className="flex gap-2">
+            {/* <div className="flex gap-2">
               <img src="/api/placeholder/48/32" alt="Mastercard" className="h-8" />
               <img src="/api/placeholder/48/32" alt="Visa" className="h-8" />
               <img src="/api/placeholder/48/32" alt="PayPal" className="h-8" />
               <img src="/api/placeholder/48/32" alt="Maestro" className="h-8" />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
